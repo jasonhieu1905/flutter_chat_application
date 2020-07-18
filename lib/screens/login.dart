@@ -1,4 +1,6 @@
+import 'package:chat_application/components/password_container.dart';
 import 'package:chat_application/components/rounded_text_field_container.dart';
+import 'package:chat_application/components/text_field_container.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -26,6 +28,28 @@ class _LoginScreenState extends State<LoginScreen> {
             RoundedTextFieldContainer(
               hintText: 'Enter username',
               onChanged: (value) {},
+            ),
+            PasswordContainer(
+              hintText: 'Enter password',
+              onChanged: (value) {},
+            ),
+            Container(
+              width: size.width * 0.8,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(29),
+                child: FlatButton(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  onPressed: () {},
+                  color: Colors.purple[300],
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
             )
           ],
         ),
@@ -33,4 +57,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
